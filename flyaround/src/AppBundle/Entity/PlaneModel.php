@@ -13,12 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
 class PlaneModel
 {
 
-    private $departures;
+    public function __toString()
+    {
+        return "id=" .$this->id;
+    }
 
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="plane")
      */
-    private $plane;
+    private $planes;
 
     /**
      * @var int
@@ -234,5 +237,15 @@ class PlaneModel
     public function getPlane()
     {
         return $this->plane;
+    }
+
+    /**
+     * Get planes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPlanes()
+    {
+        return $this->planes;
     }
 }

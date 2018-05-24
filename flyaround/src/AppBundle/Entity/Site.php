@@ -25,7 +25,7 @@ class Site
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="arrival")
      */
-    private $arrival;
+    private $arrivals;
 
 
     public function __toString()
@@ -284,5 +284,15 @@ class Site
     public function getArrival()
     {
         return $this->arrival;
+    }
+
+    /**
+     * Get arrivals
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArrivals()
+    {
+        return $this->arrivals;
     }
 }
