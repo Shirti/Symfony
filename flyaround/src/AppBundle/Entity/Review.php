@@ -42,19 +42,6 @@ class Review
      */
     private $id;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="user_rated_id", type="integer")
-     */
-    private $userRatedId;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="review_author_id", type="integer")
-     */
-    private $reviewAuthorId;
 
     /**
      * @var string
@@ -86,54 +73,6 @@ class Review
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set userRatedId
-     *
-     * @param integer $userRatedId
-     *
-     * @return Review
-     */
-    public function setUserRatedId($userRatedId)
-    {
-        $this->userRatedId = $userRatedId;
-
-        return $this;
-    }
-
-    /**
-     * Get userRatedId
-     *
-     * @return int
-     */
-    public function getUserRatedId()
-    {
-        return $this->userRatedId;
-    }
-
-    /**
-     * Set reviewAuthorId
-     *
-     * @param integer $reviewAuthorId
-     *
-     * @return Review
-     */
-    public function setReviewAuthorId($reviewAuthorId)
-    {
-        $this->reviewAuthorId = $reviewAuthorId;
-
-        return $this;
-    }
-
-    /**
-     * Get reviewAuthorId
-     *
-     * @return int
-     */
-    public function getReviewAuthorId()
-    {
-        return $this->reviewAuthorId;
     }
 
     /**
